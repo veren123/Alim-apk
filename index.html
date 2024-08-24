@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apk alim kami</title>
+    <link rel="logo icon" href="l.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-bottom: 50px;
+            /* Memberikan ruang untuk navbar di bawah */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Menjaga header tetap di atas konten lain */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .header .share-icon {
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header .share-icon:hover {
+            color: #ffd700;
+            /* Mengubah warna ikon saat hover */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 0;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            /* Menjaga navbar tetap di atas konten lain */
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            text-align: center;
+            transition: all 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            color: #ffd700;
+            /* Mengubah warna teks saat hover */
+            transform: scale(1.1);
+            /* Membesar sedikit saat hover */
+        }
+
+        .navbar a i {
+            display: block;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover i {
+            color: #ffd700;
+            /* Mengubah warna ikon saat hover */
+            transform: rotate(360deg);
+            /* Memutar ikon saat hover */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            z-index: 1001;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            margin: 20px 0;
+            font-size: 1em;
+        }
+
+        .modal-footer {
+            text-align: right;
+        }
+
+        .modal-footer button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-footer button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Aplikasi alim kami</h1>
+        <i class="fas fa-share-alt share-icon" id="shareIcon"></i>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!-- Konten utama -->
+    <div> <!-- Tambahkan padding untuk menghindari overlap dengan header -->
+        <h1> doa agar di beri ketampanan</h1>
+        <p>Rabbanaa atmim lanaa nuuronaa waghfir lanaa innaka 'alaa kulli syai in qadiir.
+            <br>
+            <br>
+            Artinya: Ya Tuhan kami, sempurnakanlah bagi kami cahaya kami dan ampunilah kami; sesungguhnya Engkau Maha
+            Kuasa atas segala sesuatu. (QS. At Tahrim: 8) Demikian doa agar wajah bercahaya dan disukai banyak orang.
+        </p>
+    </div>
+
+    <h1> doa agar ujian mendapat nilai 100
+    </h1>
+    <p><b>Robbi srohli shadri, wa yassir lii amri wahlul uqdatammin lisani, yafqahu qauli.</b>
+        <br>
+        <br>
+        Artinya: “Ya Rab-ku, lapangkanlah dadaku, dan ringankanlah segala urusanku, dan lepaskanlah kekakuan dari
+        lidahku, agar mereka mengerti perkataanku.” (Q.S. At-Thaha: 25-28)
+        <br>
+        <br>
+        Saat seseorang berdoa dengan sungguh-sungguh kepada Allah saat akan menghadapi ujian dan berharap nilainya
+        bagus, ia menunjukkan ketergantungannya pada-Nya sebagai sumber segala kebaikan.
+        <br>
+        <br>
+        <b>2. رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رُشْدًا
+            Robbanaa ‘aatinaa miladunka rohmatan, wahayyi’ lanaa min amrinaa rosyadaa.</b>
+        <br>
+        <br>
+        Artinya: “Ya Tuhanku, berikanlah kepada kami rahmat-Mu, dan sempurnakan atas kami petunjuk yang lurus dalam
+        urusan kami.” (QS. Al Kahfi: 10)
+        <br>
+        <br>
+        Membaca doa ujian agar mendapat nilai bagus, secara tidak langsung dapat memperkuat ikatan spiritual dengan
+        Allah, mengakui bahwa kesuksesan dan prestasi akademik bukan hanya hasil usaha manusia semata, tetapi juga
+        karunia dari-Nya.
+        <br>
+        <br>
+        <b> 3. اللَّهُمَّ لاَ سَهْلَ إِلاَّ مَا جَعَلْتَهُ سَهْلاً وَأَنْتَ تَجْعَلُ الحَزْنَ إِذَا شِئْتَ سَهْلاً
+            Allahumma laa sahla illa maa ja'altahu sahlaa, wa anta taj'alul hazna idza syi'ta sahlaa</b>
+        <br>
+        <br>
+        Artinya: "Ya Allah, tidak ada kemudahan kecuali yang Engkau buat mudah. Dan Engkau menjadikan kesedihan
+        (kesulitan), jika Engkau kehendaki pasti akan menjadi mudah."
+        <br>
+        <br>
+        <b> 4. رَبِّ زِدْنِي عِلْمًا
+            Rabbi zidnii ‘ilmaa</b>
+        <br>
+        <br>
+        Artinya: “Ya Tuhanku, tambahkanlah kepadaku ilmu pengetahuan.”
+        <br>
+        <br>
+        Selain itu, berdoa ketika akan mengerjakan sebuah ujian juga merupakan sarana untuk memohon petunjuk,
+        keberkahan, dan kemudahan dalam belajar, serta membuka pintu rahmat Allah agar Ilmu yang dipelajari menjadi
+        bermanfaat dan mendapatkan nilai yang memuaskan.
+    </p>
+    <h1>doa zikir </h1>
+    <b>1. Membaca Istighfar Dahulu</b>
+    <br>
+    <br>
+    <p>Sebelum berdoa, dianjurkan untuk membaca istighfar sebanyak tiga kali:
+        <br>
+        أَسْتَغْفِرُ اللهَ الْعَظِـيْمِ الَّذِيْ لَااِلَهَ اِلَّا هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ
+
+        <br>
+        "ASTAGHFIRULLAH HAL'ADZIM, ALADZI LAAILAHA ILLAHUWAL KHAYYUL QOYYUUMU WA ATUUBU ILAIIH"
+
+    </p>
+    <b>2. Dilanjutkan dengan membaca :
+    </b>
+    <p>لَاإِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِيْ وَيُمِيْتُ وَهُوَ
+        عَلَى كُلِّ شَيْئٍ قَدِيْرٌ
+        <br>
+        <br>
+        "LAA ILAHA ILLALLAH WAKHDAHU LAA SYARIKA LAHU, LAHUL MULKU WALAHUL KHAMDU YUKHYIIY WAYUMIITU WAHUWA 'ALAA KULLI
+        SYAI'INNQODIIR"
+    </p>
+    <b>3. Memohon perlindungan dari siksa neraka, dengan membaca berikut 3 kali:
+    </b>
+    <p>اَللَّهُمَّ أَجِرْنِـى مِنَ النَّارِ
+        <br>
+        <br>
+        "ALLAHUMMA AJIRNI MINAN-NAAR" 3 x
+    </p>
+    <b>4. Memuji Allah Dengan Kalimat
+    </b>
+    <p>للَّهُمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلَامُ، وَإِلَيْكَ يَعُوْدُ السَّلَامُ فَحَيِّنَارَبَّنَا بِالسَّلَامِ
+        وَاَدْخِلْنَا الْـجَنَّةَ دَارَ السَّلَامِ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ يَا ذَاالْـجَلَالِ وَاْلإِكْرَام.
+        <br>
+        <br>
+        "ALLAHUMMA ANGTASSALAM, WAMINGKASSALAM, WA ILAYKA YA'UUDUSSALAM FAKHAYYINA RABBANAA BISSALAAM
+        WA-ADKHILNALJANNATA DAROSSALAAM TABAROKTA RABBANAA WATA'ALAYTA YAA DZALJALAALI WAL IKRAAM"
+    </p>
+    <b>5. Membaca surat Al-Fatihah dan ayat kursi
+    </b>
+    <p>Membaca Surat Al-Fatihah kemudian dilanjutkan dengan membaca Ayat Kursi (Al-Baqarah : 255)
+        <br>
+        <br>
+        أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ. بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ. اَللهُ لَا إِلَهَ إِلَّا
+        هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَّلَانَوْمٌ، لَهُ مَافِي السَّمَاوَاتِ وَمَافِي اْلأَرْضِ مَن
+        ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَابَيْنَ أَيْدِيْهِمْ وَمَاخَلْفَهُمْ وَلَا
+        يُحِيْطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَآءَ، وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَاْلأَرْضَ وَلَا
+        يَـؤدُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيْمُ.
+        <br>
+        <br>
+        "Allahu laa ilaaha illaa huwal hayyul qayyum. Laa ta'khudzuhuu sinatuw wa laa naum. Lahuu maa fis samaawaati wa
+        maa fil ardh. Man dzal ladzii yasyfa'u 'indahuu illaa bi idznih. Ya'lamu maa bayna aidiihim wa maa khalfahum. Wa
+        laa yuhiithuuna bi syai-im min 'ilmihii illaa bimaa syaa-a. Wasi'a kursiyyuhus samaawaati wal ardh walaa
+        ya-uuduhuu hifzhuhumaa Wahuwal 'aliyyul 'azhiim."
+
+    </p>
+    <b>6. Membaca Tasbih, Tahmid, Takbir, dan Tahlil
+    </b>
+    <p>Membaca kalimat Tasbih 33 kali
+        <br>
+        <br>
+        سُبْحَانَ اللهِ
+        <br>
+        <br>
+        "SUBHANALLAH" 33x
+        <br>
+        <br>
+        Membaca kalimat Tahmid 33 kali
+        <br>
+        <br>
+        الْحَمْدُلِلهِ
+        <br>
+        <br>
+        "ALHAMDULILLAH" 33x
+
+        <br>
+        <br>
+        Membaca kalimat Takbir 33 kali
+        <br>
+        <br>
+        اللهُ اَكْبَرُ
+        <br>
+        <br>
+        "ALLAHU AKBAR"
+        <br>
+        <br>
+        Membaca kalimat Tahlil 33 kali
+        <br>
+        <br>
+
+        لَااِلٰهَ اِلَّا اللهُ
+        <br>
+        <br>
+        "LAILAHA ILLALLAH"
+    </p>
+    <br>
+    <b>7. Membaca Doa Berikut
+    </b>
+    <br>
+    <br>
+    <p>Setelah selesai berdzikir, maka membaca doa setelah sholat berikut
+        <br><br>
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+
+        اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ. حَمْدًا يُوَافِيْ نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ. يَا رَبَّنَا لَكَ
+        الْحَمْدُ كَمَا يَنْبَغِيْ لِجَلاَلِ وَجْهِكَ الْكَرِيْمِ وَعَظِيْمِ سُلْطَانِكَ
+        <br><br>
+        "BISMILLAHIRRAHMAANIRRAHIIM. ALHAMDU LILLAAHI RABBIL 'AALAMIIN, HAMDAN YUWAAFII NI'AMAHU WAYUKAAFII MAZIIDAHU.
+        YA RABBANAA LAKAL HAMDU KAMAA YAN BAGHHI LIJALAALI WAJHIKA WA'AZHIIMI SULTHAANIKA."
+        <br><br>
+        اللهم صل على سيدنا محمد وعلى ال سيدنا محمد
+        <br><br>
+        "ALLAHUMMA SHALLI 'ALAA SAYYIDINAA MUHAMMADIN WA'ALAA AALI SAYYIDINAA MUHAMMAD".
+        <br><br>
+        اَللَّهُمَّ رَبَّنَا تَـقَـبَّلْ مِنَّا صَلاَتَنَا وَصِيَا مَنَا وَرُكُوْ عَنَا وَسُجُوْدَنَا وَقُعُوْدَنَا
+        وَتَضَرُّ عَنَا وَتَخَشُّوْ عَنَا وَتَعَبُّدَنَا وَتَمِّمْ تَقْصِيْرَ نَا يَا اَلله يَا رَبَّ الْعَا لَمِيْنَ
+
+        <br><br>
+        "ALLAHUMMA RABBANAA TAQABBAL MINNAA SHALAATAANA WASHIYAAMANAA WARUKUU'ANAA WASUJUUDANAA WAQU'UUDANAA
+        WATADLARRU'ANAA, WATAKHASYSYU'ANAA WATA'ABBUDANAA, WATAMMIM TAQSHIIRANAA YAA ALLAH YAA RABBAL'AALAMIIN".
+        <br><br>
+        رَبَّنَا ضَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْ حَمْنَا لَنَكُوْ نَنَّ مِنَ الْخَا سِرِ يْنَ
+        <br><br>
+        "RABBANA DZHALAMNAA ANFUSANAA WA-INLAMTAGHFIR LANA WATARHAMNAA LANAKUUNANNA MlNAL KHAASIRIIN".
+        <br><br>
+        رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِ يْنَ مِنْ قَبْلِنَا
+        <br><br>
+        "RABBANAA WALAA TAHMIL'ALAINAA ISHRAN KAMA HAMALTAHUL'ALAL LADZIINA MIN QABLINAA."
+        <br><br>
+        رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَا قَتَا لَنَا بِهِ, وَاعْفُ عَنَّا وَاغْفِرْلَنَا وَارْحَمْنَا أَنْتَ
+        مَوْلاَ نَا فَا نْصُرْنَا عَلَى الْقَوْمِ الْكَا فِرِيْنَ
+        <br><br>
+        "RABBANAA WALAA TUHAMMILNAA MAALAA THAAQATA LANAA BIHII WA'FU'ANNAA WAGHFIR LANAA WARHAMNAA ANTA MAULAANAA
+        FANSHURNAA 'ALAL QAUMIL KAAFIRIIN".
+        <br><br>
+        رَبَّنَا لاَ تُزِغْ قُلُوْ بَنَا بَعْدَ إِذْ هَدَ يْتَنَا وَهَبْ لَنَا مِنْ لَّدُ نْكَ رَحْمَةً إِنَّكَ أَنْتَ
+        الْوَهَّابُ
+        <br><br>
+        "RABBANAA LAA TUZIGH QULUUBANAA BA'DA IDZHADAITANAA W'AHABLANAA MIN LADUNKA RAHMATAN INNAKA ANTAL WAHHAAB".
+        <br><br>
+        رَبَّنَا غْفِرْلَنَا وَلِوَالِدِيْنَ وَلِجَمِيْعِ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِيْنَ
+        وَالْمُؤْمِنَاتِ أَلْأَ حْيَآءِمِنْهُمْ وَاْلأَ مْوَاتِ, اِنَّكَ عَلَى قُلِّ ثَيْءٍقَدِيْرِ
+        <br><br>
+        "RABBANAGHFIR LANAA WALIWAALIDINAA WALIJAMI'IL MUSLIMIIN WALMUSLIMAATI WAL MU'MINIINA WALMU'MINATI. AL
+        AHYAA-I-MINHUM WAL AMWAATI, INNAKA ALAA KULI SYAI'N QADIIR".
+        <br><br>
+        رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي اْلآ خِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+        <br><br>
+        "RABBANAA AATINAA FIDDUNYAA HASANATAN WAFIL AAKHIRATI HASANATAN WAQINAA ADZAABAN-NAAR".
+        <br><br>
+        اللهم اغفر لنا ذنوبناوكفرعنا سيئاتنا وتوفنا مَعَ الْأَ بْرَارِ
+        <br><br>
+        "ALLAHUMMAGHFIRLANAA DZUNUUBANAA WAKAFFIR ANNAA SAYYIAATINAA WATAWAFFANAA MAALABRAARI".
+        <br><br>
+        سُبْحَانَ رَبِّكِ رَبِّ الْعِزَةِ عَمَّا يَصِفُوْنَ، وَسَلاَمٌ عَلَى الْمُرْ سَلِيْنَ، وَالْحَمْدُ لِلهِ رَبِّ
+        الْعَالَمِيْنَ
+        <br><br>
+        "SUBHAANA RABBIKA RABBIL I'ZZATI AMMAA YASHIFUUNA WASALAAMUN 'ALAL MURSALHNA WAL-HAMDU LILLAAHI
+        RABBIL'AALAMIINA".
+        <br><br>
+
+        Artinya: ""Dengan menyebut nama Allah Yang Maha Pengasih dan Maha Penyayang.
+        <br><br>
+        Segala puji bagi Allah Tuhan seru sekalian alam. Dengan puji yang sebanding dengan nikmat-Nya dan menjamin
+        tambahannya. Ya Allah Tuhan Kami, bagi-Mu segala puji dan segala apa yang patut atas keluhuran DzatMu dan
+        Keagungan kekuasaanMu. "Ya Allah! Limpahkanlah rahmat dan salam atas junjungan kita Nabi Muhammad dan sanak
+        keluarganya.
+        <br><br>
+        Ya Allah terima sholat kami, puasa kami, ruku kami, sujud kami, duduk rebah kami, khusyu' kami, pengabdian kami,
+        dan sempurnakanlah apa yang kami lakukan selama sholat ya Allah. Tuhan seru sekalian alam.
+        <br><br>
+        Ya Allah, Kami telah aniaya terhadap diri kami sendiri, karena itu ya Allah jika tidak dengan limpahan
+        ampunan-Mu dan rahmat-Mu niscaya kami akan jadi orang yang sesat. Ya Allah Tuhan kami, janganlah Engkau pikulkan
+        atas diri kami beban yang berat sebagaimana yang pernah Engkau bebankan kepada orang yang terdahulu dari kami.
+        Ya Allah Tuhan kami, janganlah Engkau bebankan atas diri kami apa yang di luar kesanggupan kami. Ampunilah dan
+        limpahkanlah rahmat ampunan terhadap diri kami ya Allah. Ya Allah Tuhan kami, berilah kami pertolongan untuk
+        melawan orang yang tidak suka kepada agamaMu.
+        <br><br>
+        Ya Allah Tuhan kami, janganlah engkau sesatkan hati kami sesudah mendapat petunjuk, berilah kami karunia.
+        Engkaulah yang maha Pemurah.
+        <br><br>
+        Ya Allah Ya Tuhan kami, ampunilah dosa kami dan dosa dosa orang tua kami, dan bagi semua orang Islam laki-laki
+        dan perempuan, orang orang mukmin laki-laki dan perempuan. Sesungguhnya Engkau dzat Yang Maha Kuasa atas
+        segala-galanya.
+        <br><br>
+        Maha suci Engkau, Tuhan segala kemuliaan. Suci dari segala apa yang dikatakan oleh orang-orang kafir. Semoga
+        kesejahteraan atas para Rasul dan segala puji bagi Allah Tuhan seru sekalian alam."
+
+    </p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <!-- Navbar di bawah -->
+    <div class="navbar">
+        <a href="#home" class="icon"><i class="fas fa-home"></i><br>Beranda</a>
+        <a href="#about" class="icon"><i class="fas fa-info-circle"></i><br>Tentang Kami</a>
+        <a href="#settings" class="icon"><i class="fas fa-cogs"></i><br>Pengaturan</a>
+        <a href="#" class="icon" id="versionLink"><i class="fas fa-tag"></i><br>Versi APK</a>
+    </div>
+
+    <!-- Modal untuk Versi APK -->
+    <div id="versionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeVersionModal">&times;</span>
+            <h2>Versi APK</h2>
+            <p>Versi: 9.1.4.56.b7ed</p>
+            <h3>Nama Pengembang</h3>
+            <p>Nama Pengembang: veren</p>
+        </div>
+    </div>
+
+    Modal untuk Penyambutan
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeWelcomeModal">&times;</span>
+            <div class="modal-header">
+                Selamat Datang di Aplikasi Kami!
+            </div>
+            <div class="modal-body">
+                <h2>Terima Kasih Telah Berkunjung!</h2>
+                <p>Kami senang Anda bergabung dengan kami. Untuk memulai, berikut adalah beberapa fitur utama dari
+                    aplikasi kami:</p>
+                <ul>
+                    <li><strong>Konten 1:</strong> Temukan berbagai fitur menarik dan berguna.</li>
+                    <li><strong>Konten 2:</strong> Dapatkan update terbaru dan informasi penting.</li>
+                    <li><strong>Konten 3:</strong> Hubungi kami untuk dukungan dan umpan balik.</li>
+                </ul>
+                <p>Jangan ragu untuk mengeksplorasi dan memanfaatkan semua fitur yang kami tawarkan!</p>
+            </div>
+            <div class="modal-footer">
+                <button id="closeWelcomeBtn">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal untuk penyambutan
+        var welcomeModal = document.getElementById("welcomeModal");
+        var closeWelcomeBtn = document.getElementById("closeWelcomeBtn");
+
+        // Modal untuk versi APK
+        var versionModal = document.getElementById("versionModal");
+        var versionLink = document.getElementById("versionLink");
+        var closeVersionModal = document.getElementById("closeVersionModal");
+
+        // Modal share
+        var shareIcon = document.getElementById("shareIcon");
+
+        // Ketika halaman dimuat, tampilkan modal penyambutan
+        window.onload = function () {
+            welcomeModal.style.display = "block";
+        }
+
+        // Ketika pengguna mengklik <span> (x) atau tombol tutup modal versi APK, tutup modal
+        closeWelcomeBtn.onclick = function () {
+            welcomeModal.style.display = "none";
+        }
+
+        closeVersionModal.onclick = function () {
+            versionModal.style.display = "none";
+        }
+
+        // Ketika pengguna mengklik tombol versi APK, tampilkan modal versi APK
+        versionLink.onclick = function (event) {
+            event.preventDefault(); // Menghindari navigasi
+            versionModal.style.display = "block";
+        }
+
+        // Ketika pengguna mengklik ikon share, lakukan aksi berbagi
+        shareIcon.onclick = function () {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Aplikasi Kami',
+                    text: 'Cek aplikasi kami!',
+                    url: window.location.href,
+                })
+                    .then(() => console.log('Berhasil dibagikan!'))
+                    .catch((error) => console.log('Terjadi kesalahan saat berbagi:', error));
+            } else {
+                alert('Fitur berbagi tidak tersedia di perangkat ini.');
+            }
+        }
+
+        // Ketika pengguna mengklik di luar modal, tutup modal
+        window.onclick = function (event) {
+            if (event.target == welcomeModal) {
+                welcomeModal.style.display = "none";
+            } else if (event.target == versionModal) {
+                versionModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
